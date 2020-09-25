@@ -10,8 +10,8 @@ const speeds = [
     {'nome': 'motociclo de cilindrada superior a 50cc com carro lateral', 'velocidades': [ 50, 70, 80, 100]},
     {'nome': 'ligeiro de mercadorias com reboque', 'velocidades': [ 50, 70, 80, 90]},
     {'nome': 'pesado de passageiros com reboque', 'velocidades': [ 50, 70, 90, 90]},
-    {'nome': 'pesado de mercadorias com reboque', 'velocidades': [ 50, 70, 70, 80]},
-    {'nome': 'maquina industrial com matricula', 'velocidades': [ 50, 70, 70, 80]},
+    {'nome': 'pesado de mercadorias com reboque', 'velocidades': [ 40, 70, 70, 80]},
+    {'nome': 'maquina industrial com matricula', 'velocidades': [ 40, 70, 70, 80]},
     {'nome': 'motociclos com cilindrada ate 50cc', 'velocidades': [ 40, 60]},
     {'nome': 'maquina agricula', 'velocidades': [ 20, 20]},
     {'nome': 'tratocarro', 'velocidades': [ 20, 20]},
@@ -47,9 +47,9 @@ window.onload = function(ev) {
         if (response === velocidade) {
             resetForm();
         } else {
-            generateQuestion();
             incorrect.removeAttribute('hidden');
             incorrect.textContent = `${incorrectText} ${velocidade}`;
+            generateQuestion();
         }
     
         event.preventDefault();
