@@ -27,27 +27,27 @@ const  vias = ['dentro das localidades', 'restantes vias publicas', 'via reserva
 window.onload = function(ev) {
     var velocidade;
     const form = document.getElementById('form');
-    const selector = document.getElementById('selector');
-    const reset = document.getElementById('reset');
     const road = document.getElementById('road');
     const vehicle = document.getElementById('vehicle');
-    const correct = document.getElementById('correct');
     const incorrect = document.getElementById('incorrect');
+    const ans1 = document.getElementById('answer-1');
+    const ans2 = document.getElementById('answer-2');
+    const ans3 = document.getElementById('answer-3');
+    const ans4 = document.getElementById('answer-4');
+    const ansButtons = [ans1, ans2, ans3, ans4]
     const incorrectText = 'Errado, resposta certa era ';
 
     generateQuestion();
 
     form.onsubmit = submit;
-    form.onreset = resetForm;
 
     function submit(event) {
-        const response = +selector.value;
+        const response = +event.submitter.textContent;
         
         if (response === velocidade) {
             resetForm();
         } else {
             incorrect.removeAttribute('hidden');
-            reset.removeAttribute('hidden');
             incorrect.textContent = `${incorrectText} ${velocidade}`;
         }
     
@@ -57,9 +57,6 @@ window.onload = function(ev) {
     function resetForm() {
         incorrect.setAttribute('hidden', '');
         incorrect.textContent = '';
-        correct.setAttribute('hidden', '');
-        reset.setAttribute('hidden', '');
-        clearSelector();
         generateQuestion();
     }
 
@@ -75,15 +72,8 @@ window.onload = function(ev) {
         const max = velocidade + 20 > 120 ? 120 : velocidade + 20;
         const questions = randNumList(min, max, 5, 4, [velocidade]);
         shuffle(questions);
-        selector.options[0] = new Option('-', 0);
         for (var i = 0; i < questions.length; i++) {
-            selector.options[i+1] = new Option(questions[i]);
-        }
-    }
-
-    function clearSelector() {
-        for (let i = selector.options.length; i >= 0; i--) {
-            selector.options.remove(i);
+            ansButtons[i].textContent = questions[i];
         }
     }
 

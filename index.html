@@ -4,16 +4,21 @@
         <meta charset="utf-8">
         <title>Jogo das Velocidades</title>
         <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css"></script>
     </head>
     <body>
         <form id="form">
-            <p id="vehicle"></p>
-            <p id="road"></p>
-            <select id="selector" onchange="form.dispatchEvent(new Event('submit'))"></select>
-            <!-- <button id="submit" type="submit">Submeter</button> -->
-            <button id="reset" type="reset" hidden>Reset</button>
+            <div id="question">
+                <p id="vehicle"></p>
+                <p id="road"></p>
+            </div>
+            <p id="incorrect" hidden></p>
+            <div class="btn-group">
+                    <button class="answer" id="answer-1" type="submit"></button>
+                    <button class="answer" id="answer-2" type="submit"></button>
+                    <button class="answer" id="answer-3" type="submit"></button>
+                    <button class="answer" id="answer-4" type="submit"></button>
+                </div>
         </form>
-        <p id="correct" hidden>Correto!</p>
-        <p id="incorrect" hidden></p>
     </body>
 </html>

@@ -1,0 +1,44 @@
+
+
+html {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: auto;
+}
+
+#question {
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+}
+
+#incorrect {
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+}
+
+.btn-group button {
+    margin: 10px auto;
+    padding: 10px 24px;
+    width: 50%;
+    display: block;
+}
+
+.answer {
+    font-size: 125%;
+    background: rgb(66, 184, 221);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
