@@ -1,6 +1,26 @@
 const speeds = [
     {'nome': 'ligeiro de passageiros', 'velocidades': [ 50, 90, 100, 120]},
-    {'nome': 'ligeiro de mercadorias', 'velocidades': [ 50, 80, 80, 110]}
+    {'nome': 'motociclo cilindrada superior a 50cc', 'velocidades': [ 50, 90, 100, 120]},
+    {'nome': 'ligeiro de mercadorias', 'velocidades': [ 50, 80, 90, 110]},
+    {'nome': 'pesado de passageiros', 'velocidades': [ 50, 80, 90, 100]},
+    {'nome': 'triciclo', 'velocidades': [ 50, 80, 90, 100]},
+    {'nome': 'pesado de mercadorias', 'velocidades': [ 50, 80, 80, 90]},
+    {'nome': 'pesado de mercadorias com semireboque', 'velocidades': [ 50, 80, 80, 90]},
+    {'nome': 'ligeiro de passageiros com reboque', 'velocidades': [ 50, 70, 80, 100]},
+    {'nome': 'motociclo de cilindrada superior a 50cc com carro lateral', 'velocidades': [ 50, 70, 80, 100]},
+    {'nome': 'ligeiro de mercadorias com reboque', 'velocidades': [ 50, 70, 80, 90]},
+    {'nome': 'pesado de passageiros com reboque', 'velocidades': [ 50, 70, 90, 90]},
+    {'nome': 'pesado de mercadorias com reboque', 'velocidades': [ 50, 70, 70, 80]},
+    {'nome': 'maquina industrial com matricula', 'velocidades': [ 50, 70, 70, 80]},
+    {'nome': 'motociclos com cilindrada ate 50cc', 'velocidades': [ 40, 60]},
+    {'nome': 'maquina agricula', 'velocidades': [ 20, 20]},
+    {'nome': 'tratocarro', 'velocidades': [ 20, 20]},
+    {'nome': 'multicultivador', 'velocidades': [ 20, 20]},
+    {'nome': 'maquina industrial sem matricula', 'velocidades': [ 30, 30]},
+    {'nome': 'trator agricula', 'velocidades': [ 30, 40]},
+    {'nome': 'ciclomotores', 'velocidades': [ 40, 45]},
+    {'nome': 'quadriciclo', 'velocidades': [ 40, 45]},
+    {'nome': 'comboio turristico', 'velocidades': [ 25 ]},
 ];
 const  vias = ['dentro das localidades', 'restantes vias publicas', 'via reservadas a automoveis e motociclos', 'autoestradas'];
 
