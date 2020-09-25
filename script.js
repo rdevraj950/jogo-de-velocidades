@@ -73,7 +73,7 @@ window.onload = function(ev) {
 
         const min = velocidade - 20 < 10 ? 10 : velocidade - 20;
         const max = velocidade + 20 > 120 ? 120 : velocidade + 20;
-        const questions = [...rand(min, max, 5, 3, velocidade), velocidade];
+        const questions = randNumList(min, max, 5, 4, [velocidade]);
         shuffle(questions);
         selector.options[0] = new Option('-', 0);
         for (var i = 0; i < questions.length; i++) {
@@ -87,6 +87,7 @@ window.onload = function(ev) {
         }
     }
 
+    // https://stackoverflow.com/a/2450976
     function shuffle(array) {
         var currentIndex = array.length, temporaryValue, randomIndex;
       
@@ -106,11 +107,14 @@ window.onload = function(ev) {
         return array;
       }
 
-    function rand(min, max, step, numberOfElements, savedNum) {
+    // https://stackoverflow.com/a/8904785
+    // with a slight change to create the while loop so it creates an array
+    // .. that is distinct
+    function randNumList(min, max, step, numberOfElements, fillArray) {
         var delta,
             range,
             rand;
-        var list = [];
+        var list = [...fillArray];
         while (list.length < numberOfElements) {
             if (arguments.length < 2) {
                 max = min;
@@ -126,7 +130,7 @@ window.onload = function(ev) {
             rand = Math.floor(rand);
             rand *= step;
             rand += min;
-            if (list.indexOf(rand) == -1 && rand !== savedNum) {
+            if (list.indexOf(rand) == -1) {
                 list[list.length] = rand;
             }
         }
