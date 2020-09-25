@@ -1,0 +1,61 @@
+
+
+html {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    min-height: 100%;
+    margin: 2rem;
+    padding: 0;
+    position: relative;
+    overflow: auto;
+    font: 30px system-ui;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 100px;
+    grid-template-areas:
+    "f f f f f f f f"
+    "g g g g g g g g"
+    "a a a a b b b b"
+    "a a a a b b b b"
+    "c c c c d d d d"
+    "c c c c d d d d"
+    "e e e e e e e e";
+}
+#question {
+    grid-area: f;
+    text-align: center;
+}
+#incorrect {
+    grid-area: e;
+    text-align: center;
+}
+#answer-1 {
+    grid-area: a;
+}
+#answer-2 {
+    grid-area: b;
+}
+#answer-3 {
+    grid-area: c;
+}
+#answer-4 {
+    grid-area: d;
+}
+.answer {
+    font-size: 125%;
+    background: rgb(66, 184, 221);
+    border: none;
+    outline:none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}

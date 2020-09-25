@@ -47,6 +47,7 @@ window.onload = function(ev) {
         if (response === velocidade) {
             resetForm();
         } else {
+            generateQuestion();
             incorrect.removeAttribute('hidden');
             incorrect.textContent = `${incorrectText} ${velocidade}`;
         }
@@ -57,7 +58,6 @@ window.onload = function(ev) {
     function resetForm() {
         incorrect.setAttribute('hidden', '');
         incorrect.textContent = '';
-        generateQuestion();
     }
 
     function generateQuestion() {
