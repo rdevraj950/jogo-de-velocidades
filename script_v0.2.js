@@ -56,6 +56,7 @@ window.onload = function(ev) {
     }
 
     function resetForm() {
+        generateQuestion();
         incorrect.setAttribute('hidden', '');
         incorrect.textContent = '';
     }

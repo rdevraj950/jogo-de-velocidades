@@ -35,6 +35,7 @@ body {
 #incorrect {
     grid-area: e;
     text-align: center;
+    color: red;
 }
 #answer-1 {
     grid-area: a;
