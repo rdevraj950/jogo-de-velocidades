@@ -24,6 +24,8 @@ const speeds = [
 ];
 const  vias = ['dentro das localidades', 'restantes vias publicas', 'via reservadas a automoveis e motociclos', 'autoestradas'];
 
+// comment
+
 window.onload = function(ev) {
     var velocidade;
     const form = document.getElementById('form');
